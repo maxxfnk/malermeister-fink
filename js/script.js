@@ -47,17 +47,16 @@ window.addEventListener("scroll", () => {
     });
 });
 
-emailjs.sendForm('service_imog2la', 'template_ycjgsqb', this)
 const form = document.getElementById("contact-form");
 
 form.addEventListener("submit", function(e) {
     e.preventDefault();
 
-    emailjs.sendForm('DEIN_SERVICE_ID', 'DEIN_TEMPLATE_ID', this)
+    emailjs.sendForm('service_imog2la', 'template_ycjgsqb', this)
         .then(() => {
-            alert("Nachricht gesendet!");
+            form.innerHTML = "<p style='color:green;'>Nachricht erfolgreich gesendet!</p>";
             form.reset();
         }, () => {
-            alert("Fehler beim Senden.");
+            form.innerHTML = "<p style='color:red;'>Fehler beim Senden. Bitte erneut versuchen.</p>";
         });
 });

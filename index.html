@@ -6,7 +6,9 @@
         <title>Malermeister Fink</title>
         <link rel="stylesheet" href="css/style.css">
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     </head>
+    
     <body>
         
         <header>
@@ -83,9 +85,9 @@
                         <p><strong>Adresse:</strong>Zeller Straße 14, 64720 Michelstadt</p>
                     </div>
 
-                    <form class="contact-form">
-                        <input type="text" placeholder="Name" required>
-                        <input type="email" placeholder="Email" required>
+                    <form class="contact-form" id="contact-form">
+                        <input type="text" name="name" placeholder="Name" required>
+                        <input type="email" name="email" placeholder="Email" required>
                         <textarea name="message" rows="5" required></textarea>
                         <button type="submit">Anfrage senden</button>
                     </form>
@@ -102,8 +104,9 @@
     </script>
 
     <script src="js/script.js"></script>
-    </body>
     <footer>
-    <p>© 2026 Malermeister Fink</p>
-</footer>
+        <p>© 2026 Malermeister Fink</p>
+    </footer>
+    </body>
+    
 </html>
