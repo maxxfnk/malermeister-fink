@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Malermeister Fink</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        
+        <header>
+            <div class="container">
+                <h1 class="logo">Malermeister Fink</h1>
+                <div class="menu-toggle" id="menu-toggle">
+                    ☰
+                </div>
+                
+                <nav>
+                    <ul>
+                        <li><a href="#home">Start</a></li>
+                        <li><a href="#leistungen">Leistungen</a></li>
+                        <li><a href="#referenzen">Referenzen</a></li>
+                        <li><a href="#kontakt">Kontakt</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+        </header>
+
+        <main>
+            
+            <section id="home" class="impression">
+                <div class="impression-content">
+                    <h2>Saubere Arbeit - Perfekte Ergebnisse</h2>
+                    <p>Ihr Malerbetrieb für Innen- und Außenarbeiten</p>
+                    <a href="#kontakt" class="btn">Jetzt Angebot anfragen</a>
+                </div>
+            </section>
+
+            <section id="leistungen">
+                <div class="wrapper">
+                    <h2>Unsere Leistungen</h2>
+
+                    <div class="cards">
+                        <div class="card">
+                            <h3>Innenanstrich</h3>
+                            <p>Saubere und präzise Arbeiten für ihre Innenräume.</p>
+                        </div>
+
+                        <div class="card">
+                            <h3>Fassaden</h3>
+                            <p>Schutz und Verschönerung Ihrer Außenflächen.</p>
+                        </div>
+
+                        <div class="card">
+                            <h3>Tapezierarbeiten</h3>
+                            <p>Professionelle Wandgestaltung nach Ihren Wünschen.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="referenzen">
+                <h2>Referenzen</h2>
+
+                <div class="gallery">
+                    <img src="images/PlatzhalterGallerie/Platzhalter1.jpg" alt="Projekt 1">
+                    <img src="images/PlatzhalterGallerie/Platzhalter2.jpg" alt="Projekt 2">
+                    <img src="images/PlatzhalterGallerie/Platzhalter3.jpg" alt="Projekt 3">
+                </div>
+            </section>
+
+            <section id="kontakt">
+                <h2>Kontakt</h2>
+                
+                <div class="contact-container">
+
+                    <div class="contact-info">
+                        <h3>Kontaktieren Sie uns</h3>
+                        <p><strong>Telefon:</strong> 0160-5884481</p>
+                        <p><strong>Email:</strong> maxfink2005@gmail.com</p>
+                        <p><strong>Adresse:</strong>Zeller Straße 14, 64720 Michelstadt</p>
+                    </div>
+
+                    <form class="contact-form">
+                        <input type="text" placeholder="Name" required>
+                        <input type="email" placeholder="Email" required>
+                        <textarea name="message" rows="5" required></textarea>
+                        <button type="submit">Anfrage senden</button>
+                    </form>
+
+                </div>
+            </section>
+
+        </main>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+        (function(){
+        emailjs.init("CO5_citBaywn7Nlhf");
+        })();
+    </script>
+
+    <script src="js/script.js"></script>
+    </body>
+    <footer>
+    <p>© 2026 Malermeister Fink</p>
+</footer>
+</html>

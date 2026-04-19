@@ -1,0 +1,368 @@
+:root {
+    --main: #ad3a3a;
+    --main-light: #c94a4a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    padding-top: 70px;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    letter-spacing: 0.8px;
+    font-weight: 700;
+}
+
+
+h1 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+h2::after{
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--main);
+    margin: 10px auto 0;
+}
+
+h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+p {
+    line-height: 1.6;
+    color: #aaaaaa;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+section {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+section > *{
+    max-width: 1100px;
+    margin: auto;
+}
+
+header {
+    background: var(--main);
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav li {
+    margin-left: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+}
+
+nav a.active {
+    color: #f4f6f8;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #f4f6f8;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+nav a:hover{
+    color: white;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+.impression {
+    height: 100vh;
+    background: url("../images/BackgroundLogo.jpg") center 30% / cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.impression::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+}
+
+.impression-content {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+}
+
+.impression h2 {
+    font-size: 42px;
+    margin-top: 25vh;
+    margin-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 6px rgba(0,0,0,0.8);
+}
+
+.impression p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 6px rgba(0,0,0,0.8);
+}
+
+.btn, .contact-form button {
+    background: var(--main);
+    padding: 14px 30px;
+    border-radius: 8px;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: all 0.2s ease;
+}
+
+.btn:hover, .contact-form button:hover {
+    background: var(--main-light);
+    transform: translateY(-2px) scale(1.02);
+}
+
+#leistungen {
+    background: #f9f9f9;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.4s ease;
+}
+
+.card.show{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+.gallery img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    filter: brightness(0.95);
+    box-shadow: o 10px 25px rgba(0,0,0,0.1);
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.05);
+}
+
+#kontakt {
+    background: #f4f6f8;
+}
+
+.contact-container {
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.contact-info {
+    text-align: center;
+    margin: auto;
+    font-size: larger;
+}
+
+.contact-info p {
+    color: #555;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 16px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    background: #f9f9f9;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--main-light);
+    background: white;
+    box-shadow: 0 0 0 2px rgba(201,74,74,0.2);
+}
+
+.contact-form button {
+    background: var(--main);
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background: var(--main-light);
+    transform: translateY(-2px);
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+}
+
+@media (max-width: 900px) {
+
+    .container {
+        flex-wrap: wrap;
+    }
+
+    .contact-container{
+        grid-template-columns: 1fr;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: all 0.3s ease;
+        pointer-events: none;
+        display: none;
+    }
+
+    nav.active {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        background: var(--main);
+        padding: 10px 0;
+    }
+
+    nav li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .impression h2 {
+        font-size: 28px;
+    }
+
+    .impression p {
+        font-size: 16px;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+}
+footer {
+    background: var(--main);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
